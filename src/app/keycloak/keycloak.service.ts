@@ -8,15 +8,10 @@ export class KeycloakService {
   static auth: any = {};
 
   static init(): Promise<any> {
-   /* const keycloakAuth: any = Keycloak({
-      keycloakRootUrl: 'http://localhost:8080/auth',
-      realm: 'product-app',
-      clientId: 'client-ui'
-    });*/
     const keycloakAuth: any = Keycloak({
       url: environment.keycloakRootUrl,
-      realm: 'product-app',
-      clientId: 'client-ui',
+      realm: environment.realm,
+      clientId: environment.clientId,
       'ssl-required': 'external',
       'public-client': true
     });
@@ -28,7 +23,7 @@ export class KeycloakService {
             KeycloakService.auth.loggedIn = true;
             KeycloakService.auth.authz = keycloakAuth;
             KeycloakService.auth.logoutUrl = keycloakAuth.authServerUrl +
-            '/realms/product-app/protocol/openid-connect/logout?redirect_uri='
+            '/realms/' + keycloakAuth.realm + '/protocol/openid-connect/logout?redirect_uri='
             + document.baseURI;
             resolve();
           })
