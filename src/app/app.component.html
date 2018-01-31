@@ -4,7 +4,9 @@
 
 <h3>Keycloak Properties</h3>
 <div class="button-row">
-  <button mat-raised-button color="primary">Show User</button>
-  <button mat-raised-button color="primary">Show Token</button>
+  <button mat-raised-button color="primary" (click)="getUserName()">Show User</button>
+  <button mat-raised-button color="primary" (click)="getTokenParsed()">Show Token</button>
   <button mat-raised-button color="accent">User Details</button>
 </div>
+<br>
+<div>{{message}}</div>

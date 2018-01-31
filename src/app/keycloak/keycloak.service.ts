@@ -34,7 +34,6 @@ export class KeycloakService {
     }
 
     static logout() {
-      console.log('**  LOGOUT');
       KeycloakService.auth.loggedIn = false;
       KeycloakService.auth.authz = null;
       KeycloakService.auth.logout = true;

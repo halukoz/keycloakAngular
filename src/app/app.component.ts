@@ -7,11 +7,18 @@ import { KeycloakService } from './keycloak/keycloak.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-
+  message = '';
   constructor(private keycloakService: KeycloakService) {}
 
   onLogout() {
     KeycloakService.logout();
-    console.log('log out');
+  }
+
+  getUserName() {
+    this.message = KeycloakService.getFullName();
+  }
+
+  getTokenParsed() {
+    this.message = JSON.stringify(KeycloakService.getTokenParsed());
   }
 }
