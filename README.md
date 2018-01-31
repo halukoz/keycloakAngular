@@ -5,7 +5,6 @@ Keycloak is a open source software product to allow single sign-on and Identity 
 * Identity Management: Keycloak
 * Frontend: Angular 5, Angular Material, HTML-5, CSS-3
 * Package Management: Npm
-* Build Automation Tool: Maven  
 
 ## How to install
 * Clone the project from this github page.
