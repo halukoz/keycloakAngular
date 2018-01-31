@@ -1,19 +1,19 @@
 # Keycloak Angular5 Application, Identity and Access Management
-Keycloak is a open source software productto allow single sign-on and Identity Management. Keycloak is implemented with Angular-5 in this project. This project provides angular and keycloak server connection, basic Angular UI with Angular Material to show the token, user information and logout functionality of the page. 
+Keycloak is a open source software product to allow single sign-on and Identity Management. Keycloak is implemented with Angular-5 in this project. This project provides Angular and Keycloak server connection, basic Angular UI with Angular Material to show the token, user information and logout functionality of the page. 
 
 ## Technologies
 * Identity Management: Keycloak
 * Frontend: Angular 5, Angular Material, HTML-5, CSS-3
 * Package Management: Npm
-* Test: Junit Test, Karma, Jasmine
 * Build Automation Tool: Maven  
 
 ## How to install
 * Clone the project from this github page.
-* run => nmp install
+* Run => nmp install
 * Download Keycloak Server from http://www.keycloak.org/downloads.html (as zip folder)
 * Run Keycloak Server
-* run => ng serve
+* Update environment.prod.ts & environment.ts files (under environmets folder) with your keycloak configuration informations, (with your redirect-url, realm)
+* Run => ng serve
 * open => http://localhost:4200/
 
 # KeycloakAngular
